@@ -52,8 +52,6 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
   const text = req.body.review;
   const user = req.session.authorization;
 
-  // console.log('ok!!', isbn, text, username)
-
   if (!user) {
     return res.status(401).json({ message: "Unauthorized" });
   }
